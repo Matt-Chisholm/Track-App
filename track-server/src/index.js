@@ -1,8 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const authRoutes = require("./routes/authRoutes");
 
 const app = express();
+
+app.use(authRoutes);
 
 const MONGO_PW = process.env.MONGO_PW;
 const mongoUri = `mongodb+srv://mattchiz:${MONGO_PW}@cluster0.mjgyjrb.mongodb.net/?retryWrites=true&w=majority`;
