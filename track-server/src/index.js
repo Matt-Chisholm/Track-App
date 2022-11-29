@@ -1,3 +1,4 @@
+require("./models/User");
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -7,7 +8,6 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.json());
-
 app.use(authRoutes);
 
 const MONGO_PW = process.env.MONGO_PW;
