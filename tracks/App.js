@@ -6,14 +6,14 @@ import TrackDetailScreen from "./screens/TrackDetailScreen";
 import TrackListScreen from "./screens/TrackListScreen";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import { createBottomTabNavigator } from "react-navigation-tabs";
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 
 const switchNavigator = createSwitchNavigator({
   loginFlow: createStackNavigator({
     Signup: SignupScreen,
     Signin: SigninScreen,
   }),
-  mainFlow: createBottomTabNavigator({
+  mainFlow: createMaterialBottomTabNavigator({
     trackListFlow: createStackNavigator({
       TrackList: TrackListScreen,
       TrackDetail: TrackDetailScreen,
@@ -22,3 +22,5 @@ const switchNavigator = createSwitchNavigator({
     Account: AccountScreen,
   }),
 });
+
+export default createAppContainer(switchNavigator);
