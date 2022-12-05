@@ -4,7 +4,7 @@ import React from "react";
 export default function AccountScreen() {
   return (
     <View>
-      <Text>AccountScreen</Text>
+      <Text style={{ fontSize: 48 }}>AccountScreen</Text>
     </View>
   );
 }
