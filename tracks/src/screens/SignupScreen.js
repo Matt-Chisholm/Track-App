@@ -25,6 +25,8 @@ export default function SignupScreen({ navigation }) {
         label='Password'
         value={password}
         onChangeText={setPassword}
+        autoCapitalize='none'
+        autoCorrect={false}
       />
       <Spacer>
         <Button title='Sign Up' />
