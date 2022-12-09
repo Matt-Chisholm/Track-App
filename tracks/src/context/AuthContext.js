@@ -63,10 +63,14 @@ const signin =
     }
   };
 
-const signout = (dispatch) => {
-  return () => {
-    // somehow sign out
-  };
+const signout = (dispatch) => () => {
+  // somehow sign out
+  try {
+    AsyncStorage.removeItem("token");
+    navigate("loginFlow");
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const { Provider, Context } = createDataContext(
