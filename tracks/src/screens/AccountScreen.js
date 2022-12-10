@@ -7,13 +7,30 @@ import { SafeAreaView } from "react-navigation";
 export default function AccountScreen() {
   const { signout } = useContext(AuthContext);
   return (
-    <SafeAreaView forceInset={{ top: "always" }}>
-      <Text style={{ fontSize: 48 }}>AccountScreen</Text>
+    <SafeAreaView style={styles.container} forceInset={{ top: "always" }}>
+      <Text style={styles.text}>Signed in</Text>
       <Spacer>
-        <Button title='Sign Out' onPress={() => signout()} />
+        <Button
+          style={styles.button}
+          title='Sign Out'
+          onPress={() => signout()}
+        />
       </Spacer>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    marginBottom: 250,
+  },
+  text: {
+    fontSize: 48,
+    alignSelf: "center",
+  },
+  button: {
+    margin: 10,
+  },
+});
