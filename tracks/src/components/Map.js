@@ -13,7 +13,7 @@ export default function Map() {
     } else {
       points.push({
         latitude: 37.33233 - i * 0.0002,
-        longitude: -122.03121 - i * 0.0005,
+        longitude: -122.03121 - i * 0.0003,
       });
     }
   }
