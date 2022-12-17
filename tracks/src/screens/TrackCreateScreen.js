@@ -10,11 +10,12 @@ export default function TrackCreateScreen() {
 
   const startWatching = async () => {
     try {
-      const { granted } = await requestPermissionsAsync();
+      const { granted } = await requestForegroundPermissionsAsync();
       if (!granted) {
         throw new Error("Location permission not granted");
       }
     } catch (e) {
+      console.log(e);
       setErr(e);
     }
   };
@@ -22,10 +23,12 @@ export default function TrackCreateScreen() {
   useEffect(() => {
     startWatching();
   }, []);
+
   return (
     <SafeAreaView forceInset={{ top: "always" }}>
       <Text h3>Create a Track</Text>
       <Map />
+      {err ? <Text>Please enable location services</Text> : null}
     </SafeAreaView>
   );
 }
