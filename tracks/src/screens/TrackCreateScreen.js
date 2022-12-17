@@ -6,6 +6,8 @@ import Map from "../components/Map";
 import { requestForegroundPermissionsAsync } from "expo-location";
 
 export default function TrackCreateScreen() {
+  const [err, setErr] = useState(null);
+
   const startWatching = async () => {
     try {
       const { granted } = await requestPermissionsAsync();
@@ -16,6 +18,10 @@ export default function TrackCreateScreen() {
       setErr(e);
     }
   };
+
+  useEffect(() => {
+    startWatching();
+  }, []);
   return (
     <SafeAreaView forceInset={{ top: "always" }}>
       <Text h3>Create a Track</Text>
