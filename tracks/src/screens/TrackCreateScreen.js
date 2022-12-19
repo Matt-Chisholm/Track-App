@@ -19,6 +19,16 @@ export default function TrackCreateScreen() {
       if (!granted) {
         throw new Error("Location permission not granted");
       }
+      await watchPositionAsync(
+        {
+          accuracy: Accuracy.BestForNavigation,
+          timeInterval: 1000,
+          distanceInterval: 10,
+        },
+        (location) => {
+          console.log(location);
+        }
+      );
     } catch (e) {
       console.log(e);
       setErr(e);
