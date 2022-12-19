@@ -1,11 +1,14 @@
-import '../_mockLocation';
+import "../_mockLocation";
 import { StyleSheet } from "react-native";
 import { Text } from "react-native-elements";
 import { SafeAreaView } from "react-navigation";
 import React, { useEffect, useState } from "react";
 import Map from "../components/Map";
-import { requestForegroundPermissionsAsync } from "expo-location";
-
+import {
+  requestForegroundPermissionsAsync,
+  watchPositionAsync,
+  Accuracy,
+} from "expo-location";
 
 export default function TrackCreateScreen() {
   const [err, setErr] = useState(null);
