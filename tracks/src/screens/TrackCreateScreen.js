@@ -37,7 +37,6 @@ export default function TrackCreateScreen() {
 
   useEffect(() => {
     startWatching();
-    console.log('wow');
   }, []);
 
   return (
