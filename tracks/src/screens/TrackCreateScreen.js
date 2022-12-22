@@ -12,7 +12,6 @@ import {
 
 export default function TrackCreateScreen() {
   const [err, setErr] = useState(null);
-  console.log("TrackCreateScreen: err=", err);
 
   const startWatching = async () => {
     try {
