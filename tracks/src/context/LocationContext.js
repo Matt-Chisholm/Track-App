@@ -33,3 +33,9 @@ const addLocation = (dispatch) => (location, recording) => {
     dispatch({ type: "add_location", payload: location });
   }
 };
+
+export const { Context, Provider } = createDataContext(
+  locationReducer,
+  { startRecording, stopRecording, addLocation },
+  { name: "", recording: false, locations: [], currentLocation: null }
+);
