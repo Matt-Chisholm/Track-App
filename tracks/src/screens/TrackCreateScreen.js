@@ -28,6 +28,7 @@ export default function TrackCreateScreen() {
           distanceInterval: 10,
         },
         (location) => {
+          console.log(location);
           addLocation(location);
         }
       );
