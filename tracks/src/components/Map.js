@@ -4,16 +4,18 @@ import MapView, { Polyline } from "react-native-maps";
 import { Context as LocationContext } from "../context/LocationContext";
 
 export default function Map() {
+  const { state } = useContext(LocationContext);
+
   return (
     <MapView
       style={styles.map}
       initialRegion={{
-        latitude: 37.33233,
-        longitude: -122.03121,
+        latitude: 48.43002,
+        longitude: -123.36302,
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
       }}>
-      <Polyline coordinates={points} />
+      <Polyline coordinates={null} />
     </MapView>
   );
 }
