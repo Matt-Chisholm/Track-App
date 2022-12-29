@@ -1,22 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import MapView, { Polyline } from "react-native-maps";
+import { Context as LocationContext } from "../context/LocationContext";
 
 export default function Map() {
-  let points = [];
-  for (let i = 0; i < 20; i++) {
-    if (i % 2 === 0) {
-      points.push({
-        latitude: 37.33233 + i * 0.0002,
-        longitude: -122.03121 + i * 0.0003,
-      });
-    } else {
-      points.push({
-        latitude: 37.33233 - i * 0.0002,
-        longitude: -122.03121 - i * 0.0003,
-      });
-    }
-  }
   return (
     <MapView
       style={styles.map}
