@@ -35,7 +35,6 @@ export default (callback) => {
     return () => {
       if (subscriber) {
         subscriber.remove();
-        console.log(subscriber);
       }
     };
   }, [callback]);
