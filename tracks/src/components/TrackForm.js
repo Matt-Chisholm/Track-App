@@ -11,10 +11,16 @@ const TrackForm = () => {
     changeName,
   } = useContext(LocationContext);
 
+  console.log(locations.length);
+
   return (
     <>
       <Spacer>
-        <Input placeholder='Enter name' value={name} onChange={changeName} />
+        <Input
+          value={name}
+          onChangeText={changeName}
+          placeholder='Enter name'
+        />
       </Spacer>
       <Spacer>
         {recording ? (
