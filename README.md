@@ -1,34 +1,24 @@
-﻿# Track-App
+# Track-App
 
-Track-App is a mobile app that allows users to track their paths while on hikes, bike rides, road trips, and more. The app is built using React Native and leverages Expo and Google Maps API for location tracking and mapping. The data is stored in MongoDB to allow users to review their tracks and progress over time.
+Track-App is an application for users to track their paths when on hikes, bike rides, road trips, and more. It was built using React Native, MongoDB, Expo, and Google Maps' API.
 
-Installation
-To install Track-App, clone the repository to your local machine:
+## Installation
 
-bash
-Copy code
-git clone https://github.com/your-username/track-app.git
-Then, navigate to the project directory and install the dependencies using npm:
+1. Clone the repository
+2. Run `npm install`
+3. Start the app with `npx expo start`
 
-bash
-Copy code
-cd track-app
-npm install
-Finally, start the development server with:
+## Usage
 
-sql
-Copy code
-npx expo start
-This will open a web interface where you can select which emulator to use or scan the QR code with the Expo mobile app on your device.
+1. Sign up or log in to an existing account.
+2. Create a new trip by selecting "New Trip" from the dashboard and entering trip details.
+3. Use the app to track your path during your trip.
+4. Save your trip once you have finished tracking.
 
-Features
-Track your path using GPS tracking.
-View your path on the map in real-time.
-Save your tracks to view later or share with others.
-Track your progress over time.
-User authentication with MongoDB.
-Technologies Used
-React Native
-Expo
-MongoDB
-Google Maps API
+## Features
+
+- Create a new account or log in to an existing one.
+- Create a new trip and track your path using the app.
+- View all your saved trips on the dashboard.
+- View details of a specific trip, including a map of the path.
+- Edit and delete trips.
